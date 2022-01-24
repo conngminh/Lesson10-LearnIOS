@@ -10,12 +10,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var loading: UIActivityIndicatorView!
+    @IBOutlet weak var secondLoading: UIActivityIndicatorView!
     
     var timer: Timer? //bước 1: khởi tạo timer
     var second = 0 // Bước 2: biến second để hẹn giờ
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLoading()
+        setupSecondLoading()
     }
 
     func setupLoading() {
@@ -35,6 +37,15 @@ class ViewController: UIViewController {
             
         }
         print(second)
+    }
+    
+    func setupSecondLoading() {
+        secondLoading.startAnimating()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.secondLoading.stopAnimating()
+            self.secondLoading.hidesWhenStopped = true
+        }
     }
 }
 

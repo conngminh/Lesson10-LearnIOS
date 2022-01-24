@@ -24,16 +24,27 @@
                                 </constraints>
                                 <color key="color" systemColor="systemPinkColor"/>
                             </activityIndicatorView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="nXX-Kt-VcF">
+                                <rect key="frame" x="192" y="568" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fbq-9Y-FSi"/>
+                                    <constraint firstAttribute="width" constant="30" id="s5M-EG-lZS"/>
+                                </constraints>
+                                <color key="color" systemColor="systemIndigoColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="iky-Rr-W6Z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="05p-KS-9af"/>
                             <constraint firstItem="iky-Rr-W6Z" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TfA-3b-fOW"/>
+                            <constraint firstItem="nXX-Kt-VcF" firstAttribute="top" secondItem="iky-Rr-W6Z" secondAttribute="bottom" constant="100" id="Xka-uD-lDl"/>
+                            <constraint firstItem="nXX-Kt-VcF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fwa-em-AvQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="loading" destination="iky-Rr-W6Z" id="Dcc-hl-juw"/>
+                        <outlet property="secondLoading" destination="nXX-Kt-VcF" id="2ii-OW-FZo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -44,6 +55,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
