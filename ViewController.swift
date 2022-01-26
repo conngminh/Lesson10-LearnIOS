@@ -14,12 +14,36 @@ class ViewController: UIViewController {
     
     var timer: Timer? //bước 1: khởi tạo timer
     var second = 0 // Bước 2: biến second để hẹn giờ
+    var showLoginSecond = 0
+    var secondTimer: Timer?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLoading()
         setupSecondLoading()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        secondTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(showLoginScreen), userInfo: nil, repeats: true)
+    }
+    
+    @objc func showLoginScreen() {
+        showLoginSecond += 1
+        if showLoginSecond == 5 {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginScreen")
+            //CÁCH SET FULL MÀN HÌNH
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overFullScreen
+            //
+            present(vc, animated: true, completion: nil)
+            
+            // Dừng timer
+            secondTimer?.invalidate()
+            secondTimer = nil
+            
+        }
+    }
+    
     func setupLoading() {
         loading.startAnimating()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:  #selector(hideLoading), userInfo: nil, repeats: true) //bước 1.1: khởi tạo timer

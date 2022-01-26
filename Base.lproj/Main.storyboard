@@ -32,14 +32,21 @@
                                 </constraints>
                                 <color key="color" systemColor="systemIndigoColor"/>
                             </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo" translatesAutoresizingMaskIntoConstraints="NO" id="quY-7s-e2N">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="iky-Rr-W6Z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="05p-KS-9af"/>
+                            <constraint firstItem="quY-7s-e2N" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6ar-9l-U1u"/>
+                            <constraint firstAttribute="trailing" secondItem="quY-7s-e2N" secondAttribute="trailing" id="FZV-b8-eqT"/>
                             <constraint firstItem="iky-Rr-W6Z" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TfA-3b-fOW"/>
                             <constraint firstItem="nXX-Kt-VcF" firstAttribute="top" secondItem="iky-Rr-W6Z" secondAttribute="bottom" constant="100" id="Xka-uD-lDl"/>
                             <constraint firstItem="nXX-Kt-VcF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fwa-em-AvQ"/>
+                            <constraint firstAttribute="bottom" secondItem="quY-7s-e2N" secondAttribute="bottom" id="mT3-M4-Per"/>
+                            <constraint firstItem="quY-7s-e2N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mYZ-cb-aJp"/>
                         </constraints>
                     </view>
                     <connections>
@@ -49,10 +56,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-555" y="43"/>
+            <point key="canvasLocation" x="-1126.0869565217392" y="24.776785714285712"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iiE-Ml-3mf">
+            <objects>
+                <viewController storyboardIdentifier="loginScreen" id="4Rr-5H-bRb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kIa-BW-7cd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeg-Rb-VMV">
+                                <rect key="frame" x="20" y="74" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u0y-hl-eXb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zeg-Rb-VMV" firstAttribute="leading" secondItem="u0y-hl-eXb" secondAttribute="leading" constant="20" id="37B-Ko-kQ8"/>
+                            <constraint firstItem="zeg-Rb-VMV" firstAttribute="top" secondItem="u0y-hl-eXb" secondAttribute="top" constant="30" id="EYf-H9-dRI"/>
+                            <constraint firstItem="u0y-hl-eXb" firstAttribute="trailing" secondItem="zeg-Rb-VMV" secondAttribute="trailing" constant="20" id="FsU-5u-6uL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dS-r6-AVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-323" y="25"/>
         </scene>
     </scenes>
     <resources>
+        <image name="demo" width="1343" height="2015"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
