@@ -21,24 +21,29 @@ class LoginVC: UIViewController {
     @IBAction func tapOnLogin(_ sender: Any) {
         if tfUser.text == "" {
             //SHOW ALERT
-            showAlert(titleAlert: "Please enter your username", titleAction: "Agree")
+            showAlert(titleAlert: "Please enter your username", titleAction1: "Agree", titleAction2: "Dissmiss")
             return
         }
         
         if tfPassword.text == "" {
             //SHOW ALERT
-            showAlert(titleAlert: "Please enter your password", titleAction: "Agree")
+            showAlert(titleAlert: "Please enter your password", titleAction1: "Agree", titleAction2: "Dissmiss")
             return
         }
         
-        showAlert(titleAlert: "LoginSuccess", titleAction: "OK")
+        showAlert(titleAlert: "LoginSuccess", titleAction1: "YES", titleAction2: "NO")
     }
     
-    func showAlert(titleAlert: String, titleAction: String) {
+    func showAlert(titleAlert: String, titleAction1: String, titleAction2: String) {
         //SHOW ALERT
         let alert = UIAlertController(title: titleAlert, message: nil, preferredStyle: .alert)
-        let action = UIAlertAction(title: titleAction, style: .default, handler: nil)
-        alert.addAction(action)
+        let actionYes = UIAlertAction(title: titleAction1, style: .default, handler: nil)
+        let actionNo = UIAlertAction(title: titleAction2, style: .destructive) { action in
+            self.tfUser.text = ""
+            self.tfPassword.text = ""
+        }
+        alert.addAction(actionYes)
+        alert.addAction(actionNo)
         present(alert, animated: true, completion: nil)
     }
     
