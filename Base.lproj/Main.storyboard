@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="-1126.0869565217392" y="24.776785714285712"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="iiE-Ml-3mf">
             <objects>
-                <viewController storyboardIdentifier="loginScreen" id="4Rr-5H-bRb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginScreen" id="4Rr-5H-bRb" customClass="LoginVC" customModule="Lesson10" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kIa-BW-7cd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,15 +72,57 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JDo-Xj-yLJ">
+                                <rect key="frame" x="57" y="304" width="300" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="LNg-C8-QTa"/>
+                                    <constraint firstAttribute="height" constant="36" id="maf-rg-zhp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvX-eS-3OV">
+                                <rect key="frame" x="57" y="360" width="300" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="kuc-vW-bTJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3I-oz-uFu">
+                                <rect key="frame" x="97" y="446" width="220" height="40"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QXf-8w-dRZ"/>
+                                    <constraint firstAttribute="width" constant="220" id="o5V-9l-JzK"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tapOnLogin:" destination="4Rr-5H-bRb" eventType="touchUpInside" id="kiF-m8-Ym4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u0y-hl-eXb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="JDo-Xj-yLJ" firstAttribute="top" secondItem="zeg-Rb-VMV" secondAttribute="bottom" constant="200" id="0gJ-qp-5LN"/>
                             <constraint firstItem="zeg-Rb-VMV" firstAttribute="leading" secondItem="u0y-hl-eXb" secondAttribute="leading" constant="20" id="37B-Ko-kQ8"/>
+                            <constraint firstItem="S3I-oz-uFu" firstAttribute="centerX" secondItem="u0y-hl-eXb" secondAttribute="centerX" id="4Ez-W6-g4j"/>
                             <constraint firstItem="zeg-Rb-VMV" firstAttribute="top" secondItem="u0y-hl-eXb" secondAttribute="top" constant="30" id="EYf-H9-dRI"/>
+                            <constraint firstItem="gvX-eS-3OV" firstAttribute="centerX" secondItem="u0y-hl-eXb" secondAttribute="centerX" id="Fh9-Py-jHP"/>
                             <constraint firstItem="u0y-hl-eXb" firstAttribute="trailing" secondItem="zeg-Rb-VMV" secondAttribute="trailing" constant="20" id="FsU-5u-6uL"/>
+                            <constraint firstItem="JDo-Xj-yLJ" firstAttribute="centerX" secondItem="u0y-hl-eXb" secondAttribute="centerX" id="HW1-a6-YFU"/>
+                            <constraint firstItem="S3I-oz-uFu" firstAttribute="top" secondItem="gvX-eS-3OV" secondAttribute="bottom" constant="50" id="JdS-lm-fh0"/>
+                            <constraint firstItem="gvX-eS-3OV" firstAttribute="top" secondItem="JDo-Xj-yLJ" secondAttribute="bottom" constant="20" id="LGZ-es-tog"/>
+                            <constraint firstItem="gvX-eS-3OV" firstAttribute="width" secondItem="JDo-Xj-yLJ" secondAttribute="width" id="gY9-ZG-0mL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tfPassword" destination="gvX-eS-3OV" id="5Nh-pY-qeS"/>
+                        <outlet property="tfUser" destination="JDo-Xj-yLJ" id="VQ9-1P-u5V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dS-r6-AVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

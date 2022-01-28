@@ -24,7 +24,13 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        secondTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(showLoginScreen), userInfo: nil, repeats: true)
+//        secondTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(showLoginScreen), userInfo: nil, repeats: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginScreen")
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     @objc func showLoginScreen() {
