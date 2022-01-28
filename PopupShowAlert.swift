@@ -1,0 +1,23 @@
+//
+//  PopupShowAlert.swift
+//  Lesson10
+//
+//  Created by Lê Công Minh on 28/01/2022.
+//
+
+import UIKit
+
+class PopupShowAlert: UIViewController {
+
+    @IBOutlet weak var viewAlert: UIView!
+    @IBOutlet weak var imgAlert: UIImageView!
+    @IBOutlet weak var lbAlert: UILabel!
+
+    @IBOutlet weak var btClose: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+
+}
