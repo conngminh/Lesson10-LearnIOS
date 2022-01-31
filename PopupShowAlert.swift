@@ -24,8 +24,13 @@ class PopupShowAlert: UIViewController {
         viewAlert.layer.cornerRadius = 10
         viewAlert.layer.masksToBounds = true
         view.isOpaque = false
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         lbAlert.text = alertStr
     }
-
+    
+    
+    @IBAction func tapOnClose(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

@@ -32,7 +32,12 @@ class LoginVC: UIViewController {
         
         if tfPassword.text == "" {
             //SHOW ALERT
-            showAlert(titleAlert: "Please enter your password", titleAction1: "Agree", titleAction2: "Dissmiss")
+//            showAlert(titleAlert: "Please enter your password", titleAction1: "Agree", titleAction2: "Dissmiss")
+            let vc = PopupShowAlert(nibName: "PopupShowAlert", bundle: nil)
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overFullScreen
+            vc.alertStr = "Please enter your password"
+            present(vc, animated: true, completion: nil)
             return
         }
         
