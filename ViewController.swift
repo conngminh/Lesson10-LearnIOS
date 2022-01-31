@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     
     @objc func showLoginScreen() {
         showLoginSecond += 1
-        if showLoginSecond == 5 {
+        if showLoginSecond == 2 {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginScreen")
             //CÁCH SET FULL MÀN HÌNH
             vc.modalTransitionStyle = .crossDissolve
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
     
     @objc func hideLoading() {
         second += 1
-        if second == 10 {
+        if second == 2 {
             loading.stopAnimating()
             loading.hidesWhenStopped = true
             //dừng timer
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
     func setupSecondLoading() {
         secondLoading.startAnimating()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.secondLoading.stopAnimating()
             self.secondLoading.hidesWhenStopped = true
         }

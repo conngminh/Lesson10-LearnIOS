@@ -14,10 +14,18 @@ class PopupShowAlert: UIViewController {
     @IBOutlet weak var lbAlert: UILabel!
 
     @IBOutlet weak var btClose: UIButton!
-    
+    var alertStr = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupView()
+    }
+    
+    func setupView() {
+        viewAlert.layer.cornerRadius = 10
+        viewAlert.layer.masksToBounds = true
+        view.isOpaque = false
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        lbAlert.text = alertStr
     }
 
 }

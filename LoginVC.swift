@@ -21,7 +21,12 @@ class LoginVC: UIViewController {
     @IBAction func tapOnLogin(_ sender: Any) {
         if tfUser.text == "" {
             //SHOW ALERT
-            showAlert(titleAlert: "Please enter your username", titleAction1: "Agree", titleAction2: "Dissmiss")
+//            showAlert(titleAlert: "Please enter your username", titleAction1: "Agree", titleAction2: "Dissmiss")
+            let vc = PopupShowAlert(nibName: "PopupShowAlert", bundle: nil)
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overFullScreen
+            vc.alertStr = "Please enter your username"
+            present(vc, animated: true, completion: nil)
             return
         }
         
