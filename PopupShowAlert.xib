@@ -72,8 +72,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bi1-f7-mUu" secondAttribute="trailing" constant="20" id="Faz-w4-RCn"/>
+                <constraint firstItem="adk-Ml-aIs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="Gto-zh-Icj"/>
+                <constraint firstAttribute="bottom" secondItem="adk-Ml-aIs" secondAttribute="bottom" constant="355" id="UAg-bW-esr"/>
                 <constraint firstItem="bi1-f7-mUu" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="VqQ-Qp-pak"/>
                 <constraint firstItem="bi1-f7-mUu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="YeA-Ws-agU"/>
+                <constraint firstItem="adk-Ml-aIs" firstAttribute="top" secondItem="dul-Kf-hqg" secondAttribute="bottom" constant="20" id="dNY-w9-oBC"/>
+                <constraint firstAttribute="trailing" secondItem="adk-Ml-aIs" secondAttribute="trailing" constant="60" id="rx0-E2-u2c"/>
             </constraints>
             <point key="canvasLocation" x="-317.39130434782612" y="-7.3660714285714279"/>
         </view>

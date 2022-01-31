@@ -98,9 +98,23 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                 <connections>
                                     <action selector="tapOnLogin:" destination="4Rr-5H-bRb" eventType="touchUpInside" id="kiF-m8-Ym4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8V7-bD-q2k">
+                                <rect key="frame" x="97" y="536" width="220" height="40"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eo4-aQ-axK"/>
+                                    <constraint firstAttribute="width" constant="220" id="hqg-xa-c9w"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="tabOnLogOut:" destination="4Rr-5H-bRb" eventType="touchUpInside" id="SVX-Uv-67n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -114,9 +128,13 @@
                             <constraint firstItem="gvX-eS-3OV" firstAttribute="centerX" secondItem="u0y-hl-eXb" secondAttribute="centerX" id="Fh9-Py-jHP"/>
                             <constraint firstItem="u0y-hl-eXb" firstAttribute="trailing" secondItem="zeg-Rb-VMV" secondAttribute="trailing" constant="20" id="FsU-5u-6uL"/>
                             <constraint firstItem="JDo-Xj-yLJ" firstAttribute="centerX" secondItem="u0y-hl-eXb" secondAttribute="centerX" id="HW1-a6-YFU"/>
+                            <constraint firstItem="8V7-bD-q2k" firstAttribute="top" secondItem="S3I-oz-uFu" secondAttribute="bottom" constant="50" id="J7d-29-stt"/>
                             <constraint firstItem="S3I-oz-uFu" firstAttribute="top" secondItem="gvX-eS-3OV" secondAttribute="bottom" constant="50" id="JdS-lm-fh0"/>
                             <constraint firstItem="gvX-eS-3OV" firstAttribute="top" secondItem="JDo-Xj-yLJ" secondAttribute="bottom" constant="20" id="LGZ-es-tog"/>
+                            <constraint firstItem="8V7-bD-q2k" firstAttribute="height" secondItem="S3I-oz-uFu" secondAttribute="height" id="SiE-7v-VrC"/>
+                            <constraint firstItem="8V7-bD-q2k" firstAttribute="width" secondItem="S3I-oz-uFu" secondAttribute="width" id="g52-VJ-lqG"/>
                             <constraint firstItem="gvX-eS-3OV" firstAttribute="width" secondItem="JDo-Xj-yLJ" secondAttribute="width" id="gY9-ZG-0mL"/>
+                            <constraint firstItem="8V7-bD-q2k" firstAttribute="centerX" secondItem="S3I-oz-uFu" secondAttribute="centerX" id="qwh-HX-7EA"/>
                         </constraints>
                     </view>
                     <connections>

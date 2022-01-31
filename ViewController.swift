@@ -77,5 +77,7 @@ class ViewController: UIViewController {
             self.secondLoading.hidesWhenStopped = true
         }
     }
+    
+
 }
 

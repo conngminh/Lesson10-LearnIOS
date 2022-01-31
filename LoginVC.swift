@@ -57,4 +57,17 @@ class LoginVC: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    
+    @IBAction func tabOnLogOut(_ sender: Any) {
+        let alert = UIAlertController(title: "Do you want to log out?", message: nil, preferredStyle: .actionSheet)
+        let action1 = UIAlertAction(title: "Yes", style: .default) { action in
+            self.dismiss(animated: true, completion: nil)
+        }
+        let action2 = UIAlertAction(title: "No", style: .destructive, handler: nil)
+        alert.addAction(action1)
+        alert.addAction(action2)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
 }
