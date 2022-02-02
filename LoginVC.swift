@@ -11,12 +11,18 @@ class LoginVC: UIViewController {
 
     @IBOutlet weak var tfUser: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
-    
+    @IBOutlet weak var imgAvatar: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupImageAvatar()
     }
     
+    func setupImageAvatar() {
+        imgAvatar.layer.cornerRadius = 50
+        imgAvatar.layer.masksToBounds = true
+        imgAvatar.layer.borderWidth = 1
+        imgAvatar.layer.borderColor = UIColor.darkGray.cgColor
+    }
     
     @IBAction func tapOnLogin(_ sender: Any) {
         if tfUser.text == "" {

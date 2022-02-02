@@ -117,6 +117,13 @@
                                     <action selector="tabOnLogOut:" destination="4Rr-5H-bRb" eventType="touchUpInside" id="SVX-Uv-67n"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="H95-DL-Mmh">
+                                <rect key="frame" x="157" y="134" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Q2g-IK-YUU"/>
+                                    <constraint firstAttribute="height" constant="100" id="yRS-Hi-JJK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u0y-hl-eXb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -132,23 +139,27 @@
                             <constraint firstItem="S3I-oz-uFu" firstAttribute="top" secondItem="gvX-eS-3OV" secondAttribute="bottom" constant="50" id="JdS-lm-fh0"/>
                             <constraint firstItem="gvX-eS-3OV" firstAttribute="top" secondItem="JDo-Xj-yLJ" secondAttribute="bottom" constant="20" id="LGZ-es-tog"/>
                             <constraint firstItem="8V7-bD-q2k" firstAttribute="height" secondItem="S3I-oz-uFu" secondAttribute="height" id="SiE-7v-VrC"/>
+                            <constraint firstItem="H95-DL-Mmh" firstAttribute="centerX" secondItem="u0y-hl-eXb" secondAttribute="centerX" id="U1J-TJ-ajV"/>
+                            <constraint firstItem="H95-DL-Mmh" firstAttribute="top" secondItem="zeg-Rb-VMV" secondAttribute="bottom" constant="30" id="XhG-UK-UJU"/>
                             <constraint firstItem="8V7-bD-q2k" firstAttribute="width" secondItem="S3I-oz-uFu" secondAttribute="width" id="g52-VJ-lqG"/>
                             <constraint firstItem="gvX-eS-3OV" firstAttribute="width" secondItem="JDo-Xj-yLJ" secondAttribute="width" id="gY9-ZG-0mL"/>
                             <constraint firstItem="8V7-bD-q2k" firstAttribute="centerX" secondItem="S3I-oz-uFu" secondAttribute="centerX" id="qwh-HX-7EA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgAvatar" destination="H95-DL-Mmh" id="tCw-3a-4wt"/>
                         <outlet property="tfPassword" destination="gvX-eS-3OV" id="5Nh-pY-qeS"/>
                         <outlet property="tfUser" destination="JDo-Xj-yLJ" id="VQ9-1P-u5V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dS-r6-AVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-323" y="25"/>
+            <point key="canvasLocation" x="-323.1884057971015" y="24.776785714285712"/>
         </scene>
     </scenes>
     <resources>
         <image name="demo" width="1343" height="2015"/>
+        <image name="img_placeholder" width="273" height="184"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
