@@ -117,7 +117,7 @@
                                     <action selector="tabOnLogOut:" destination="4Rr-5H-bRb" eventType="touchUpInside" id="SVX-Uv-67n"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="H95-DL-Mmh">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="H95-DL-Mmh">
                                 <rect key="frame" x="157" y="134" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Q2g-IK-YUU"/>
@@ -153,8 +153,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dS-r6-AVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ct6-qP-OYB"/>
             </objects>
-            <point key="canvasLocation" x="-323.1884057971015" y="24.776785714285712"/>
+            <point key="canvasLocation" x="-319" y="-19"/>
         </scene>
     </scenes>
     <resources>
